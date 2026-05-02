@@ -18,11 +18,11 @@ const Hero = () => {
       {/* The Entire Hero is now Fixed */}
       <div className="fixed inset-0 z-0 h-screen w-full overflow-hidden">
         {/* Background Image Layer */}
-        <div className="absolute inset-0 bg-black/40 z-10"></div>
+        <div className="absolute inset-0 bg-black/50 z-10"></div>
         <img 
-          src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?q=80&w=2070&auto=format&fit=crop" 
-          alt="Pearls and Roses Luxury Bakery"
-          className="absolute inset-0 w-full h-full object-cover"
+          src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=2047&auto=format&fit=crop" 
+          alt="Pearls and Roses Luxury Interior"
+          className="absolute inset-0 w-full h-full object-cover brightness-[0.8]"
         />
 
         {/* Fixed Content Layer */}

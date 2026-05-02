@@ -6,15 +6,16 @@ const ProductItem = ({ product, index }) => {
   const isEven = index % 2 === 0;
 
   return (
-    <div className={`flex flex-col ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'} items-center justify-center min-h-[60vh] py-16 gap-12 md:gap-24 overflow-hidden`}>
+    <div className={`flex flex-col ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'} items-center justify-between min-h-[40vh] py-12 gap-8 md:gap-12 overflow-hidden`}>
+      {/* Image Column */}
       <motion.div 
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 1.5, ease: [0.76, 0, 0.24, 1] }}
-        className="flex-1 w-full flex justify-center"
+        className="flex-1 w-full flex justify-center items-center"
       >
-        <div className="w-full max-w-[450px] aspect-[4/5] overflow-hidden shadow-sm">
+        <div className="w-full max-w-[380px] aspect-[4/5] overflow-hidden shadow-sm">
           <img 
             src={product.image} 
             alt={product.name}
@@ -23,19 +24,22 @@ const ProductItem = ({ product, index }) => {
         </div>
       </motion.div>
 
+      {/* Text Column */}
       <motion.div 
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 1.5, delay: 0.3, ease: [0.76, 0, 0.24, 1] }}
-        className="flex-1 text-center md:text-left max-w-sm"
+        className="flex-1 w-full flex flex-col justify-center items-center md:items-start text-center md:text-left px-6 md:px-12"
       >
-        <span className="text-accent text-[10px] tracking-[0.4em] uppercase mb-4 block">Signature Collection</span>
-        <h2 className="text-4xl md:text-5xl mb-6 font-serif">{product.name}</h2>
-        <p className="text-base font-sans font-light leading-relaxed text-text/70 mb-8 italic">
-          "{product.description}"
-        </p>
-        <button className="btn-primary">View Details</button>
+        <div className="max-w-[450px]">
+          <span className="text-accent text-[10px] tracking-[0.4em] uppercase mb-4 block">Signature Collection</span>
+          <h2 className="text-4xl md:text-5xl mb-6 font-serif">{product.name}</h2>
+          <p className="text-base font-sans font-light leading-relaxed text-text/70 mb-8 italic">
+            "{product.description}"
+          </p>
+          <button className="btn-primary">View Details</button>
+        </div>
       </motion.div>
     </div>
   );

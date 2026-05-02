@@ -26,8 +26,8 @@ export default function VisitPage() {
             >
               <div className="aspect-video overflow-hidden">
                 <img 
-                  src="https://images.unsplash.com/photo-1550928431-ee0ec6db30d3?q=80&w=1974&auto=format&fit=crop" 
-                  alt="Bakery Facade"
+                  src="https://images.unsplash.com/photo-1517433670267-08bbd4be890f?q=80&w=2000&auto=format&fit=crop" 
+                  alt="Pearls and Roses Interior"
                   className="w-full h-full object-cover"
                 />
               </div>
